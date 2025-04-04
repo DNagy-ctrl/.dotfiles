@@ -1,0 +1,42 @@
+* {
+  font-family: "FiraMono Nerd Font";
+}
+window#waybar {
+  background: transparent;
+  color: #FFFFFF;
+}
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#custom-touchpad,
+#tray,
+#mode,
+#mpris,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+  background: #303446;
+  margin: 4px;
+  padding: 0.2em 1em;
+}
+#workspaces {
+  background: #303446;
+  margin: 4px;
+}
+#workspaces button {
+  background: transparent;
+  color: #FFFFFF;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0.2em 0.4em;
+  border-radius: 0px;
+}
