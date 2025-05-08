@@ -23,13 +23,17 @@ window#waybar {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-  background: #303446;
-  margin: 4px;
-  padding: 0.2em 1em;
+  background: rgba(255, 255, 255, 0.25);
+  margin: 2px;
+  padding: 0.1em 0.8em;
 }
 #workspaces {
-  background: #303446;
-  margin: 4px;
+    padding: 0 2px;
+    background: transparent;
+    color: #FFFFFF;
+}
+#workspaces button.active {
+  background: rgba(255, 255, 255, 0.25);
 }
 #workspaces button {
   background: transparent;
@@ -39,4 +43,11 @@ window#waybar {
   text-shadow: none;
   padding: 0.2em 0.4em;
   border-radius: 0px;
+}
+label.module {
+    padding: 0 10px;
+    box-shadow: inset 0 3px;
+}
+box.module {
+    box-shadow: inset 0 3px #ffffff;
 }
