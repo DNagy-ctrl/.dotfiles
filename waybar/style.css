@@ -3,7 +3,7 @@
 }
 window#waybar {
   background: transparent;
-  color: #FFFFFF;
+  color: lightpink;
 }
 #clock,
 #battery,
@@ -23,21 +23,21 @@ window#waybar {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-  background: rgba(255, 255, 255, 0.25);
+  background: pink;
   margin: 2px;
   padding: 0.1em 0.8em;
 }
 #workspaces {
-    padding: 0 2px;
-    background: transparent;
-    color: #FFFFFF;
+  padding: 0 2px;
+  background: transparent;
+  color: lightpink;
 }
 #workspaces button.active {
-  background: rgba(255, 255, 255, 0.25);
+  background: pink;
 }
 #workspaces button {
   background: transparent;
-  color: #FFFFFF;
+  color: lightpink;
   border: none;
   box-shadow: none;
   text-shadow: none;
@@ -45,9 +45,9 @@ window#waybar {
   border-radius: 0px;
 }
 label.module {
-    padding: 0 10px;
-    box-shadow: inset 0 3px;
+  padding: 0 10px;
+  box-shadow: inset 0 3px;
 }
 box.module {
-    box-shadow: inset 0 3px #ffffff;
+  box-shadow: inset 0 3px lightpink;
 }
