@@ -1,15 +1,13 @@
 {
   inputs = {
-  #  nixpks = {
-  #    url = "github:NixOS/nixpkgs/nixos-23.05";
-  #};
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-  };
-  outputs = { self, nixpkgs, ... }: {
+ };
+  outputs = { self, nixpkgs, ... }@inputs: {
     nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
+      obsidian = nixpkgs.lib.nixosSystem {
         system = "x86-64 linux";
-	modules = [ ./configuration.nix ];
+	modules = [ ./configuration.nix ./obsidian ./nixosModules ];
+	specialArgs = {inherit inputs; };
       };
     };
   };
