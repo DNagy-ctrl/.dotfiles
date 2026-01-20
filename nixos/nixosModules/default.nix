@@ -1,6 +1,21 @@
-{ ... }:
+{ config, lib, ... }:
 {
+  # Pick and select the unfree packages
+  # In the form:
+  # allowed-unfree-packages = [
+  #  "nameOfPackage"
+  # ];
+  options.allowed-unfree-packages = lib.mkOption {
+    type = lib.types.listOf lib.types.str;
+  };
+
+  config.nixpkgs.config.allowUnfreePredicate =
+    pkg: builtins.elem (lib.getName pkg) config.allowed-unfree-packages; 
+
  imports = [
-  ./hyprland.nix
-];
+  ./windowManager.nix
+  ./chrome.nix
+  ./packages.nix
+  ./users.nix
+ ];
 }

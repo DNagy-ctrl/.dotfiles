@@ -3,7 +3,6 @@
 {
  imports = [
   ./hardware-configuration.nix
-  
   ../nixosModules # services management
 ];
  networking.hostName = "obsidian";
@@ -15,6 +14,8 @@
   };
  };
 
+programs.zsh.enable = true;
+users.defaultUserShell = pkgs.zsh;
 
 ###########################################################################
 #   !!!!!!!!!!!!!!!!!!!!!!!!!  DO NOT CHANGE !!!!!!!!!!!!!!!!!!!!!!!!!!   #
