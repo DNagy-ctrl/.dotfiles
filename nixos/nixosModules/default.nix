@@ -17,5 +17,6 @@
   ./chrome.nix
   ./packages.nix
   ./users.nix
+  ./ssh.nix
  ];
 }

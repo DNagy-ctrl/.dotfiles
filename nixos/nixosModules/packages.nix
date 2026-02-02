@@ -4,8 +4,15 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # Text editor
-    #nvim
+    neovim
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    # For nvim
+    nodejs
+    python3
+    curlFull
+    typst
+    tinymist
+    websocat
     # Github
     wget
     gh
@@ -16,13 +23,39 @@
     kitty
     # Web browser
     firefox
+    w3m
     # CLI tools
     tree
+    yt-dlp
+    powertop
+    unzip
     # Fun CLI stuff
+    # More at https://github.com/agarrharr/awesome-cli-apps.git
     cmatrix
+    pipes
+    cbonsai
+    asciiquarium-transparent
+    sl
+    cowsay
+    figlet
+    fortune
+    aalib
+    oneko
+    # Bible App -> https://github.com/BibleJS/BibleApp.git
     # Games
     prismlauncher
     # Rust
     cargo
+    #
+    javaPackages.compiler.temurin-bin.jre-24
+    # Battery stuff
+    # Power manager
+    tlp
+    # CPU performance scaling
+     # Stops CPU overheating
+    thermald
+    # Mark down viwers
+    glow
+    litemdview
   ];
 }

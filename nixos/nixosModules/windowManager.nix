@@ -18,6 +18,10 @@
   mpv
   tiv
   feh
+  # PDF viwer
+  zathura 
+  # Log in
+  ly
  ];
 
 # Hyprland
