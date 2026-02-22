@@ -8,8 +8,12 @@ vim.opt.cursorcolumn = true
 vim.wo.relativenumber = true
 vim.wo.number = true
 
---vim.opt.clipboard = "unnamedplus" -- uses system clipboard
---vim.opt.spelllang = "en_gb"
+vim.opt.scrolloff = 20
+vim.opt.wrap = true
+vim.opt.linebreak = true
+
+vim.opt.clipboard = "unnamedplus" -- uses system clipboard
+vim.opt.spelllang = "en_gb"
 
 vim.diagnostic.config({
 	virtual_text = true,

@@ -13,6 +13,7 @@
     typst
     tinymist
     websocat
+    wl-clipboard
     # Github
     wget
     gh
@@ -57,5 +58,36 @@
     # Mark down viwers
     glow
     litemdview
-  ];
+    presenterm
+    mdcat
+    # File sharer
+    croc
+
+
+    # idk
+    xorg.xrandr
+
+   # Window Manager Packages
+    # Brightness
+    brightnessctl
+    # Cursor
+    catppuccin-cursors.mochaLight
+    # Wallpaper
+    hyprpaper
+    # File manager
+    kdePackages.dolphin
+    yazi
+    # Application launcher
+    fuzzel
+    # Image/Video viwer
+    ffmpeg
+    mpv
+    tiv
+    feh
+    kdePackages.gwenview
+    # PDF viwer
+    zathura 
+    # Log in
+    ly
+    ];
 }

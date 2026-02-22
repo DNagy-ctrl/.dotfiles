@@ -1,0 +1,4 @@
+[general]
+import = [
+    "~/.dotfiles/alacritty/themes/themes/tomorrow_night_bright.toml"
+]

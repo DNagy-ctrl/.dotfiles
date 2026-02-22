@@ -1,9 +1,9 @@
 { pkgs, config, ... }:
 {
   allowed-unfree-packages = [
-   "google-chrome"
+   "obsidian"
   ];
   environment.systemPackages = with pkgs; [
-    google-chrome
+    obsidian
   ];
 }

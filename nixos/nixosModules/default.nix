@@ -18,5 +18,6 @@
   ./packages.nix
   ./users.nix
   ./ssh.nix
+  ./obsidian.nix
  ];
 }

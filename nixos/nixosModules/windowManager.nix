@@ -1,29 +1,5 @@
 { pkgs, ... }:
 {
- # Packages
- environment.systemPackages = with pkgs; [
-  # Brightness
-  brightnessctl
-  # Cursor
-  catppuccin-cursors.mochaLight
-  # Wallpaper
-  hyprpaper
-  # File manager
-  kdePackages.dolphin
-  yazi
-  # Application launcher
-  fuzzel
-  # Image/Video viwer
-  ffmpeg
-  mpv
-  tiv
-  feh
-  # PDF viwer
-  zathura 
-  # Log in
-  ly
- ];
-
 # Hyprland
  programs.hyprland = {
   enable = true;
