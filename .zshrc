@@ -18,3 +18,8 @@ fi
 alias mp3='yt-dlp -x --audio-format mp3 --audio-quality 0 --no-playlist --cookies-from-browser firefox -o "~/music/%(title)s.%(ext)s" '
 alias mp3pl='yt-dlp -x --audio-format mp3 --audio-quality 0 --cookies-from-browser firefox '
 alias mp4='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" --cookies-from-browser firefox --extractor-args "youtube:player_client=android,web" --downloader aria2c --no-playlist -o "~/videos/%(title)s.%(ext)s" '
+
+export PATH=$PATH:$HOME/.dotfiles/scripts
+
+zinit light zdharma-continuum/fast-syntax-highlighting
+#fast-theme ~/.dotfiles/zsh-fast-theme.ini > /dev/null
