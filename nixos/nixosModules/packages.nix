@@ -1,7 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+  allowed-unfree-packages = [
+   "aseprite"
+  ];
   environment.systemPackages = with pkgs; [
     # Text editor
     neovim
@@ -79,15 +82,24 @@
     yazi
     # Application launcher
     fuzzel
-    # Image/Video viwer
+    # Image/Video viewer/editor
     ffmpeg
     mpv
     tiv
     feh
     kdePackages.gwenview
+    aseprite
     # PDF viwer
     zathura 
     # Log in
     ly
+    # Screenshots
+    grim
+    slurp
+
+    # Server stuff
+    docker
     ];
+
+     
 }

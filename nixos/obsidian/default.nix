@@ -6,8 +6,6 @@
 
   nixpkgs.config.allowUnsupportedSystem = true;
 
-  services.rustdesk-server.enable = true; # only if self-hosting the server
-
   services.tlp = {
   enable = true;
   settings = {
