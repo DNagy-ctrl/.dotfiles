@@ -19,5 +19,7 @@
   ./users.nix
   ./ssh.nix
   ./obsidian.nix
+  ./printing.nix
+  ./tmux.nix
  ];
 }

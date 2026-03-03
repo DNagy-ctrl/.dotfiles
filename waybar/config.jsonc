@@ -3,7 +3,9 @@
   "spacing": 0, // Gaps between modules (4px)
   "modules-left": [ "hyprland/workspaces" ],
   "modules-right": [
-    "pulseaudio",
+    "pulseaudio#sink",
+    "custom/separator",
+    "pulseaudio#source",
     "custom/separator",
     "network",
     "custom/separator",
@@ -27,22 +29,26 @@
     "move-to-monitor": false
   },
   "clock": {
-    "format": "{:%d/%m/%Y %H:%M}"
+    "format": "{:%d/%m/%Y %H:%M}",
+    "tooltip": false
   },
   "cpu": {
     "format": "{usage}% ",
     "tooltip": false
   },
   "memory": {
-    "format": "{}% "
+    "format": "{}% ",
+    "tooltip": false
   },
   "temperature": {
     "critical-threshold": 80,
-    "format": "{temperatureC}°C"
+    "format": "{temperatureC}°C",
+    "tooltip": false
   },
   "backlight": {
     "format": "{percent}% {icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", ""]
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "tooltip": false
   },
   "battery": {
     "states": {
@@ -53,7 +59,8 @@
     "format": "{capacity}%{time}  {icon}  {power}W",
     "format-charging": "{capacity}%{time} 󱐋{icon}  {power}W",
     "format-time": " {H}:{m}",
-    "format-icons": ["", "", "", "", ""]
+    "format-icons": ["", "", "", "", ""],
+    "tooltip": false
   },
   "network": {
     "format-wifi": "{essid} ({signalStrength}%) ",
@@ -61,24 +68,28 @@
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "tooltip": false
   },
   "pulseaudio#source": {
     "format": "{format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": "{volume}% "
+    "format-source": "",
+    "format-source-muted": "",
+    "tooltip": false
   },
   "pulseaudio#sink": {
     "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": "󰝟 {icon} {format_source}",
     "format-muted": "{volume}% 󰝟",
     "format-icons": {
       "headphone": "",
       "default": ["", "", ""]
-    }
+    },
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": "󰝟 {icon} {format_source}",
+    "tooltip": false
   },
   "custom/separator": {
-    "format": "|"
+    "format": "|",
+    "tooltip": false
   }
 }
