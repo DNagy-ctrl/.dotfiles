@@ -7,8 +7,6 @@ export LIBVA_DRIVER_NAME=i965
 alias   nrb="sudo nixos-rebuild switch --flake ~/.dotfiles/nixos" # git add ~/.dotfiles/nixos/ && # incase of a file change
 #make a git push alias for .dotfiles #alias   gp=""
 
-alias   gc="export NIXPKGS_ALLOW_UNFREE=1 && nix run nixpkgs#google-chrome --impure &disown"
-
 if [ -z $IS_NIX_SHELL ]
 then
 else

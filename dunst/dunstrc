@@ -1,0 +1,45 @@
+# See dunst(5) for all configuration options
+[global]
+    monitor = eDP-1
+    width = (0,200)
+    height = (0,150)
+    offset = (0, 0)
+    notification_limit = 0
+    icon_corner_radius = 0
+    separator_height = 1
+    padding = 0
+    horizontal_padding = 1
+    sort = true
+    font = Hack Nerd Font
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = center
+    show_age_threshold = 30
+    icon_position = off
+    history_length = 50
+    always_run_script = true
+    ignore_dbusclose = false
+    force_xwayland = false
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+    frame_width = 1
+[urgency_low]
+    background = "#111111"
+    foreground = "#cccccc"
+    timeout = 10
+    default_icon = dialog-information
+[urgency_normal]
+    background = "#111111"
+    foreground = "#cccccc"
+    frame_color = "#ffffff"
+    timeout = 10
+    override_pause_level = 30
+    default_icon = dialog-information
+[urgency_critical]
+    background = "#900000"
+    foreground = "#ffffff"
+    frame_color = "#ff0000"
+    timeout = 10
+    override_pause_level = 30
+    default_icon = dialog-warning

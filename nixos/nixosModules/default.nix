@@ -13,7 +13,6 @@
     pkg: builtins.elem (lib.getName pkg) config.allowed-unfree-packages; 
 
  imports = [
-  ./windowManager.nix
   ./chrome.nix
   ./packages.nix
   ./users.nix
@@ -21,5 +20,6 @@
   ./obsidian.nix
   ./printing.nix
   ./tmux.nix
+  ./notifications.nix
  ];
 }

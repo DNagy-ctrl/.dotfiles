@@ -1,29 +1,59 @@
 { pkgs, config, ... }:
 {
-  services.envfs.enable = true;
+  # Hyprland
+  programs.hyprland = {
+    enable = true;
+  xwayland.enable = true;
+  };
+# Waybar
+  programs.waybar = {
+    enable = true;
+  };
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; 
+  # Cursor
+  environment.etc = {
+  "xdg/gtk-2.0/gtkrc".text = ''
+    gtk-cursor-theme-name="catppuccin-mocha-light-cursors"
+  '';
+  "xdg/gtk-3.0/settings.ini".text = ''
+    [Settings]
+    gtk-cursor-theme-name = catppuccin-mocha-light-cursors
+  '';
+  };
+  programs.dconf = {
+    enable = true;
+    profiles.user.databases = [ {
+     settings = {
+      "org/gnome/desktop/interface" = {cursor-theme = "catppuccin-mocha-light-cursors";};
+     }; lockAll = true;
+    } ]; 
+   };
 
-  services.thermald.enable = true;
 
+  services = {
+    envfs.enable = true;
+    thermald.enable = true;
+     tlp = {
+      enable = true;
+      settings = {
+        CPU_SCALING_GOVERNOR_ON_AC = "performance";
+        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+        CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+        CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+        CPU_MIN_PERF_ON_AC = 0;
+        CPU_MAX_PERF_ON_AC = 100;
+        CPU_MIN_PERF_ON_BAT = 0;
+        CPU_MAX_PERF_ON_BAT = 50;
+        # Optional helps save long term battery health
+        #START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
+        #STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
+      };
+     };
+  };
+  
   nixpkgs.config.allowUnsupportedSystem = true;
 
-  services.tlp = {
-  enable = true;
-  settings = {
-    CPU_SCALING_GOVERNOR_ON_AC = "performance";
-    CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-    CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
-    CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
-    CPU_MIN_PERF_ON_AC = 0;
-    CPU_MAX_PERF_ON_AC = 100;
-    CPU_MIN_PERF_ON_BAT = 0;
-    CPU_MAX_PERF_ON_BAT = 50;
-
-    # Optional helps save long term battery health
-    #START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
-    #STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
-
-         };
-   };
    
    imports = [
     ./hardware-configuration.nix
