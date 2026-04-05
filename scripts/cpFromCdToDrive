@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 mount /dev/sr0 /mntcd
 
+sleep 1
+
 if [ $? -ne 0 ]; then
   echo "Error: Failed to mount the CD."
   exit 1
@@ -20,3 +22,6 @@ echo "Starting to copy..."
 sleep 2
 
 rsync -av --progress /mntcd /mnt/
+sleep 2
+
+umount /mntcp
