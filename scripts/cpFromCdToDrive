@@ -24,4 +24,4 @@ sleep 2
 rsync -av --progress /mntcd /mnt/
 sleep 2
 
-umount /mntcp
+umount /mntcd
