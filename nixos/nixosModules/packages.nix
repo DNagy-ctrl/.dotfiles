@@ -33,8 +33,12 @@
     yt-dlp
     powertop
     unzip
+    btop
+    htop
+    nvtopPackages.intel
     # Fun CLI stuff
     # More at https://github.com/agarrharr/awesome-cli-apps.git
+    peaclock
     cmatrix
     pipes
     cbonsai
@@ -45,6 +49,7 @@
     fortune
     aalib
     oneko
+    genact
     # Bible App -> https://github.com/BibleJS/BibleApp.git
     # Games
     prismlauncher
@@ -69,6 +74,7 @@
 
     # idk
     xorg.xrandr
+    wine
 
    # Window Manager Packages
     # Brightness
@@ -99,6 +105,9 @@
 
     # Server stuff
     docker
+
+    # Key bind setter
+    kanata
     ];
 
      

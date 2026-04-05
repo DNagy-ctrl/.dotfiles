@@ -21,5 +21,8 @@
   ./printing.nix
   ./tmux.nix
   ./notifications.nix
+  ./nixosTools.nix
+  ./waydroid.nix
+  ./zeditor.nix
  ];
 }

@@ -21,15 +21,16 @@
     gtk-cursor-theme-name = catppuccin-mocha-light-cursors
   '';
   };
-  programs.dconf = {
-    enable = true;
-    profiles.user.databases = [ {
-     settings = {
-      "org/gnome/desktop/interface" = {cursor-theme = "catppuccin-mocha-light-cursors";};
-     }; lockAll = true;
-    } ]; 
+  programs = {
+    dconf = {
+      enable = true;
+      profiles.user.databases = [ {
+       settings = {
+        "org/gnome/desktop/interface" = {cursor-theme = "catppuccin-mocha-light-cursors";};
+       }; lockAll = true;
+      } ]; 
+     };
    };
-
 
   services = {
     envfs.enable = true;

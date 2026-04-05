@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+mount /dev/sr0 /mntcd
+
+if [ $? -ne 0 ]; then
+  echo "Error: Failed to mount the CD."
+  exit 1
+fi
+
+content=$(ls /mntcd)
+if [ -z "$content" ]; then
+  echo "Error: The CD is empty! There is nothing to copy!"
+  exit 1
+fi
+
+echo "Found the following content on the CD:"
+echo "$content"
+
+sleep 3
+echo "Starting to copy..."
+sleep 2
+
+rsync -av --progress /mntcd /mnt/
