@@ -22,6 +22,9 @@ echo "Starting to copy..."
 sleep 2
 
 rsync -av --progress /mntcd /mnt/
-sleep 2
-
+echo "Copying completed"
+sleep 1
+echo "Unmounting..."
 umount /mntcd
+sleep 1
+echo "Unmounted successfully you can now remove the CD safely"
