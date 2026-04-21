@@ -1,11 +1,23 @@
 { pkgs, config, ... }:
 {
+  # User
+  users.users.nagyd = {
+    isNormalUser = true;
+    description = "nagyd";
+    extraGroups = [ "networkmanager" "wheel" ];
+  };
+
+  # System
   # Hyprland
   programs.hyprland = {
     enable = true;
-  xwayland.enable = true;
+    xwayland.enable = true;
   };
-# Waybar
+  # Hyprlock
+  programs.hyprlock = {
+    enable = true;
+  };
+  # Waybar
   programs.waybar = {
     enable = true;
   };
@@ -31,7 +43,14 @@
       } ]; 
      };
    };
+  # Notifications 
+  services.dbus.enable = true;
+  environment.systemPackages = with pkgs; [
+    dunst
+    libnotify
+  ];
 
+  # Battery 
   services = {
     envfs.enable = true;
     thermald.enable = true;
@@ -55,18 +74,19 @@
   
   nixpkgs.config.allowUnsupportedSystem = true;
 
-   
-   imports = [
+  imports = [
     ./hardware-configuration.nix
     ../nixosModules # services management
+    ./chrome.nix
   ];
-   networking.hostName = "obsidian";
+
+  networking.hostName = "obsidian";
    
    # Font
-   fonts.packages = with pkgs; [
+  fonts.packages = with pkgs; [
     nerd-fonts.hack
-   ];
-
+  ];
+  
    # BOOT NONSESE
   boot.initrd.systemd.enable = true;
   swapDevices = [{
@@ -81,15 +101,9 @@
   };
   boot.loader.efi.canTouchEfiVariables = true;
 
-#   boot = {
-#    loader = {
-#      systemd-boot.enable = true;
-#      efi.canTouchEfiVariables = true;
-#    };
-#   };
-
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
+
 
   ###########################################################################
   #   !!!!!!!!!!!!!!!!!!!!!!!!!  DO NOT CHANGE !!!!!!!!!!!!!!!!!!!!!!!!!!   #

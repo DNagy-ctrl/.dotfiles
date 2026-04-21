@@ -3,6 +3,8 @@
   "spacing": 0, // Gaps between modules (4px)
   "modules-left": [ "hyprland/workspaces" ],
   "modules-right": [
+    "tray",
+    "custom/separator",
     "pulseaudio#sink",
     "custom/separator",
     "pulseaudio#source",

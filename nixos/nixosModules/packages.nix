@@ -17,6 +17,7 @@
     tinymist
     websocat
     wl-clipboard
+    ripgrep
     # Github
     wget
     gh
@@ -36,6 +37,7 @@
     btop
     htop
     nvtopPackages.intel
+    arduino-ide
     # Fun CLI stuff
     # More at https://github.com/agarrharr/awesome-cli-apps.git
     peaclock
@@ -70,11 +72,13 @@
     mdcat
     # File sharer
     croc
-
-
+    # Stiky notes
+    xpad
     # idk
     xorg.xrandr
     wine
+    # Bluetooth
+    bluez
 
    # Window Manager Packages
     # Brightness
@@ -102,6 +106,8 @@
     # Screenshots
     grim
     slurp
+    # Cat
+    wayneko
 
     # Server stuff
     docker

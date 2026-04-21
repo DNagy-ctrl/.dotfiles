@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+mount /dev/sr0 /mntcd
+sleep 1
+if [ $? -ne 0 ]; then
+  echo "Error: Failed to mount the CD."
+  exit 1
+fi
+
+content=$(ls /mntcd)
+if [ -z "$content" ]; then
+  echo "Error: The CD is empty! There is nothing to do!"
+  exit 1
+fi
+
+echo "Found the following content on the CD:"
+echo "$content"
+
+cp /mntcd/* /tmp
+
+echo "Unmounting..."
+umount /mntcd
+sleep 1
+echo "Unmounted successfully you can now remove the CD safely"
+

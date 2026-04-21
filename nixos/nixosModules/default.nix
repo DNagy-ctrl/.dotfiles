@@ -12,17 +12,15 @@
   config.nixpkgs.config.allowUnfreePredicate =
     pkg: builtins.elem (lib.getName pkg) config.allowed-unfree-packages; 
 
+
  imports = [
-  ./chrome.nix
   ./packages.nix
   ./users.nix
   ./ssh.nix
   ./obsidian.nix
   ./printing.nix
   ./tmux.nix
-  ./notifications.nix
-  ./nixosTools.nix
+  ./flipper.nix
   ./waydroid.nix
-  ./zeditor.nix
  ];
 }
