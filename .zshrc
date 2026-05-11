@@ -19,8 +19,9 @@ alias mp4='~/.local/bin/yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ex
 
 export PATH=$PATH:$HOME/.dotfiles/scripts
 
-zinit light zdharma-continuum/fast-syntax-highlighting
+#zinit light zdharma-continuum/fast-syntax-highlighting
 #fast-theme ~/.dotfiles/zsh-fast-theme.ini > /dev/null
 
 # Correcting miss types
 alias sl="sl -w"
+export PATH="$HOME/go/bin:$PATH"

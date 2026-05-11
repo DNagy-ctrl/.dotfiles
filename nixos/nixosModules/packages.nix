@@ -57,6 +57,9 @@
     prismlauncher
     # Rust
     cargo
+    # Go
+    go
+    gcc
     #
     javaPackages.compiler.temurin-bin.jre-24
     # Battery stuff

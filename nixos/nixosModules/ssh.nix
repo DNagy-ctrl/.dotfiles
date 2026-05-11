@@ -1,9 +1,12 @@
 { config, ... }:
 {
-  config ={
-    services.openssh = {
-      enable = true;
-      settings.PasswordAuthentication = false;
+  config = {
+    services = {
+      tailscale.enable = true;
+      openssh = {
+        enable = true;
+        settings.PasswordAuthentication = false;
+      };
     };
   };
 }

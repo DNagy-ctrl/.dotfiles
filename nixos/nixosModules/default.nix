@@ -22,5 +22,6 @@
   ./tmux.nix
   ./flipper.nix
   ./waydroid.nix
+  ./vscode.nix
  ];
 }
