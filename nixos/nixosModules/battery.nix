@@ -7,7 +7,7 @@
     # CPU performance scaling
      # Stops CPU overheating
     thermald
-  };
+  ];
   services = {
     envfs.enable = true;
     thermald.enable = true;

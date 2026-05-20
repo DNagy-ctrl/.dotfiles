@@ -37,15 +37,14 @@
    };
   # Notifications 
   services.dbus.enable = true;
-  environment.systemPackages = with pkgs; [
-    dunst
-    libnotify
-  ];
   # Font
   fonts.packages = with pkgs; [
     nerd-fonts.hack
   ];
   environment.systemPackages = with pkgs; [
+    # Notifications 
+    dunst
+    libnotify
     # Brightness
     brightnessctl
     # Cursor
