@@ -25,5 +25,27 @@
 	specialArgs = {inherit inputs; };
       };
     };
+
+    nixosConfigurations = {
+      riftstone = nixpkgs.lib.nixosSystem {
+        system = "x86-64 linux";
+	modules = [ ./riftstone ./nixosModules 
+      {
+        nixpkgs.overlays = [
+          (final: prev: {
+            unstable = import nixpkgs-unstable {
+#              inherit system;
+              system = "x86_64-linux";
+            };
+#            custom = {
+#              mountui = mountui.packages.${system}.default;
+#            };
+          })
+        ];
+      }
+  ];
+	specialArgs = {inherit inputs; };
+      };
+    };
   };
 }
