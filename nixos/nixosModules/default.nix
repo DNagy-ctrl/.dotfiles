@@ -23,5 +23,11 @@
   ./flipper.nix
   ./waydroid.nix
   ./vscode.nix
+  ./minecraft.nix
+  ./webBrowser.nix
+  ./windowManager.nix
+  ./battery.nix
+  ./textEditor.nix
+  ./github.nix
  ];
 }

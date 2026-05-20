@@ -1,9 +1,10 @@
 { pkgs, config, ... }:
 {
   allowed-unfree-packages = [
-   "google-chrome"
+    "lunarclient"
   ];
   environment.systemPackages = with pkgs; [
-    google-chrome
+    prismlauncher
+    lunar-client
   ];
 }
