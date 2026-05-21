@@ -57,4 +57,12 @@
     # Windows app emulator
     wine
   ];
+
+  programs.zsh = {
+    enable = true;
+  };
+
+  users.users.nagyd = {
+    shell = pkgs.zsh;
+  };
 }

@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# do the nix stuff
+# do the ssh suff
+
+# Linking packages
+
+DOTFILES="$HOME/.dotfiles"
+echo "==> Setting up symlinks..."
+ l .config
+ln -s .dotfiles/alacritty .config
+ln -s .dotfiles/dunst .config
+ln -s .dotfiles/fuzzel .config
+rm -rf .config/hypr
+ln -s .dotfiles/hypr .config
+ln -s .dotfiles/nvim .config
+ln -s .dotfiles/tmux .config
+ln -s .dotfiles/waybar .config
+
+
+
+for dir in alacritty dunst fuzzel hypr nvim tmux waybar; do
+    rm -f ~/.config/$dir
+    ln -s $(realpath ~/.dotfiles/$dir) ~/.config/$dir
+done
