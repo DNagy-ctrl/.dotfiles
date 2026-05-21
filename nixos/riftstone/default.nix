@@ -14,11 +14,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
   networking.hostName = "riftstone";
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 2ecf8fa (configuring riftstone)
   # BOOT NONSESE
   boot.initrd.systemd.enable = true;
   swapDevices = [{
