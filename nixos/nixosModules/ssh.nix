@@ -5,7 +5,7 @@
       tailscale.enable = true;
       openssh = {
         enable = true;
-        settings.PasswordAuthentication = false;
+        settings.PasswordAuthentication = true;
       };
     };
   };
