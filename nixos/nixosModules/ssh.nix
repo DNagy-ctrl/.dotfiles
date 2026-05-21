@@ -1,19 +1,13 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
-  config = {
-    services = {
-      tailscale.enable = true;
-      openssh = {
-        enable = true;
-        settings.PasswordAuthentication = true;
-      };
-    };
-  };
-  programs.zsh = {
+  services.tailscale.enable = true;
+
+  services.openssh = {
     enable = true;
+    settings.PasswordAuthentication = true;
   };
 
-  users.users.nagyd = {
-    shell = pkgs.zsh;
+  programs.zsh = {
+    enable = true;
   };
 }
