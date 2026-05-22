@@ -5,7 +5,9 @@
 
   imports = [
     ./hardware-configuration.nix
+    ../nixosModules # services management
     ../nixosModules/steam.nix
+    ../nixosModules/minecraftServer.nix
   ];
 
   # User
