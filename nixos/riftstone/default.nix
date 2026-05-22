@@ -5,6 +5,7 @@
 
   imports = [
     ./hardware-configuration.nix
+    ../nixosModules/steam.nix
   ];
 
   # User
