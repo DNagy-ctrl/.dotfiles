@@ -30,5 +30,6 @@
   ./github.nix
   ./code.nix
   ./terminal.nix
+  ./3dPrinting.nix
  ];
 }
