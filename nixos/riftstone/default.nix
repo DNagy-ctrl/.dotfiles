@@ -16,6 +16,12 @@
     description = "nagyd";
     extraGroups = [ "networkmanager" "wheel" ];
   };
+  users.users.smp = {
+    isNormalUser = true;
+    description = "smp";
+    extraGroups = [ "networkmanager" "wheel" ];
+  };
+
   networking.hostName = "riftstone";
 
   # BOOT NONSESE
