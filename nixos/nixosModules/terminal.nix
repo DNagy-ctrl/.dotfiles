@@ -55,7 +55,9 @@
     # Monitor info
     xorg.xrandr
     # Windows app emulator
-    wine
+    pkgs.wineWowPackages.full
+    # USB
+    busybox
   ];
 
   programs.zsh = {

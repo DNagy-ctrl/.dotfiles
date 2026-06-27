@@ -13,7 +13,7 @@ else
 	PS1="%F{4}nix-shell%f|$PS1"
 fi
 
-alias mp3='~/.local/bin/yt-dlp -x --audio-format mp3 --audio-quality 0 --no-playlist --extractor-args "youtube:player_client=tv_embedded" -o "~/music/%(title)s.%(ext)s" '
+alias mp3='~/.local/bin/yt-dlp -x --audio-format mp3 --audio-quality 0 --no-playlist --extractor-args "youtube:player_client=tv_embedded"' # -o "~/music/%(title)s.%(ext)s" '
 alias mp3pl='~/.local/bin/yt-dlp -x --audio-format mp3 --audio-quality 0 --extractor-args "youtube:player_client=tv_embedded" '
 alias mp4='~/.local/bin/yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" --extractor-args "youtube:player_client=tv_embedded" --downloader aria2c --no-playlist -o "~/videos/%(title)s.%(ext)s" '
 

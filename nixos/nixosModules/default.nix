@@ -31,5 +31,9 @@
   ./code.nix
   ./terminal.nix
   ./3dPrinting.nix
+  ./phoneToCompFileTransfer.nix
+  ./flashcards.nix
+  ./cd.nix
+  ./music.nix
  ];
 }

@@ -12,7 +12,7 @@
   users.users.nagyd = {
     isNormalUser = true;
     description = "nagyd";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "cdrom" "optical" ];
   };
   networking.hostName = "obsidian";
   
