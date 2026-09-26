@@ -1,0 +1,20 @@
+vim.g.mapleader = " "
+
+local o = vim.o
+o.number = true
+o.relativenumber = true
+o.expandtab = true
+o.shiftwidth = 2
+o.ignorecase = true
+o.smartcase = true
+o.termguicolors = true
+o.signcolumn = "yes"
+o.undofile = true
+o.completeopt = "menu,menuone,noinsert,fuzzy"
+o.clipboard = "unnamedplus"
+o.scrolloff = 10
+o.splitright = true
+o.splitbelow = true
+o.cursorline = true
+o.cursorcolumn = true
+o.inccommand = "split"

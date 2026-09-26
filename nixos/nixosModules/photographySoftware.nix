@@ -1,7 +1,8 @@
 { pkgs, config, ... }:
 {
   environment.systemPackages = with pkgs; [
-    puddletag
-    losslesscut-bin
+    pkgs.unstable.vkdt
+    pkgs.unstable.darktable
+    rawtherapee
   ];
 }

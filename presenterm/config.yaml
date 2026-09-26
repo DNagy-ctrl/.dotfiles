@@ -1,0 +1,5 @@
+defaults:
+  theme: catppuccin-mocha
+bindings:
+  next: ["j"]
+  previous: ["k"]

@@ -1,19 +1,36 @@
-{ pkgs, config, ... }:
 {
+  pkgs,
+  config,
+  ...
+}: {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # Text editor
     neovim
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim
+
     # For nvim
-    nodejs
-    python3
-    curlFull
-    typst
-    tinymist
-    websocat
-    wl-clipboard
     ripgrep
+    fd
+    wl-clipboard
+    ghc
+
+    # language servers
+    lua-language-server
+    stylua # Lua
+    nil
+    alejandra # Nix
+    basedpyright
+    ruff # Python
+    tinymist # Typst
+    vscode-langservers-extracted # HTML, CSS
+    typescript-language-server # JavaScript/Typst
+    haskell-language-server
+    clang-tools # C
+
+    # Preview tooling
+    websocat # Typst
+    imagemagick # Image
   ];
 }

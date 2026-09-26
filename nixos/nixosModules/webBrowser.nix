@@ -7,5 +7,6 @@
     firefox
     w3m
     google-chrome
+    tor-browser
   ];
 }

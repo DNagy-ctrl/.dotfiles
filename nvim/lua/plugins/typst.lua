@@ -1,10 +1,11 @@
-return { 
-  'chomosuke/typst-preview.nvim', 
-  lazy = false,
+return {
+  "chomosuke/typst-preview.nvim",
+  ft = "typst",
   version = "1.*",
-  opts = {},
-  config = function()
-    vim.keymap.set( "n", "<leader>t", ":TypstPreview<CR>", {})
-  end,
+  opts = {
+    dependencies_bin = { tinymist = "tinymist", websocat = "websocat" },
+  },
+  keys = {
+    { "<leader>tp", "<cmd>TypstPreview<cr>", desc = "Typst preview" },
+  },
 }
-

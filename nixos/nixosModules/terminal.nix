@@ -1,9 +1,12 @@
-{ pkgs, config, ... }:
 {
+  pkgs,
+  config,
+  ...
+}: {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   allowed-unfree-packages = [
-   "aseprite"
+    "aseprite"
   ];
   environment.systemPackages = with pkgs; [
     # Terminal
@@ -47,7 +50,7 @@
     kdePackages.gwenview
     aseprite
     # PDF viwer
-    zathura 
+    zathura
     # Server stuff
     docker
     # File sharer

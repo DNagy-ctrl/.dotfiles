@@ -35,5 +35,6 @@
   ./flashcards.nix
   ./cd.nix
   ./music.nix
+  ./photographySoftware.nix
  ];
 }
