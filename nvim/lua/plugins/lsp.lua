@@ -7,7 +7,7 @@ return {
 
     vim.lsp.enable({
       "lua_ls", "nil_ls", "basedpyright", "ruff", "tinymist",
-      "html", "cssls", "ts_ls", "clangd", "hls",
+      "html", "cssls", "ts_ls", "clangd",
     })
 
     vim.api.nvim_create_autocmd("LspAttach", {
